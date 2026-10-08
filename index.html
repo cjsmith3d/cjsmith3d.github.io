@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio</title>
+  <meta name="description" content="Unreal Engine 5 environments, props, materials and Blueprint tools.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <a href="#top" class="brand" id="brand"></a>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#store">Assets</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-inner">
+        <span class="badge" id="badge">Open to work</span>
+        <h1 id="hero-name"></h1>
+        <p class="role" id="hero-role"></p>
+        <p class="tagline" id="hero-tagline"></p>
+        <div class="hero-cta">
+          <a class="btn primary" href="#work">View work</a>
+          <a class="btn" href="#contact">Get in touch</a>
+        </div>
+      </div>
+      <div class="grid-floor" aria-hidden="true"></div>
+    </section>
+
+    <section id="work" class="section">
+      <div class="section-head">
+        <h2>Work</h2>
+        <div class="filters" id="filters"></div>
+      </div>
+      <div class="cards" id="cards"></div>
+    </section>
+
+    <section id="store" class="section alt">
+      <div class="section-head">
+        <h2>Assets for sale</h2>
+        <p class="muted">Packs and tools you can drop into your own Unreal project.</p>
+      </div>
+      <div class="cards" id="store-cards"></div>
+      <p class="muted empty" id="store-empty">Nothing listed yet. First pack coming soon.</p>
+    </section>
+
+    <section id="about" class="section">
+      <div class="about">
+        <div>
+          <h2>About</h2>
+          <div id="about-text"></div>
+        </div>
+        <div>
+          <h3>Tools</h3>
+          <ul class="chips" id="skills"></ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section alt">
+      <h2>Contact</h2>
+      <p class="muted">Studio roles, freelance work or questions about an asset.</p>
+      <a class="email" id="email"></a>
+      <div class="links" id="links"></div>
+    </section>
+  </main>
+
+  <footer class="footer"><span id="footer"></span></footer>
+
+  <dialog id="modal">
+    <button class="close" id="close" aria-label="Close">&times;</button>
+    <div id="modal-body"></div>
+  </dialog>
+
+  <script src="content.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
