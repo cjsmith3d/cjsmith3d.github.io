@@ -20,7 +20,7 @@ const SITE = {
 
   // Leave a link as "" to hide its button.
   links: {
-    artstation: "",
+    artstation: "https://www.artstation.com/connorjsmith",
     fab: "",
     github: "https://github.com/cjsmith3d",
     youtube: "",
@@ -48,7 +48,7 @@ const PROJECTS = [
     year: "2026",
     summary: "A modular crypt kit: rooms and corridors that snap together on a 4 m grid.",
     description:
-      "A modular dungeon kit built in Blender and assembled in UE5. Walls, doorways, pillars, trims, floors, ceilings and corridor pieces all snap to a 4 m grid, so 20 x 20 m rooms and 4 m corridors connect in any layout. Stone surfaces use Nanite displacement with an edge-fade mask so neighbouring pieces seal without seams. My own props: sarcophagi, wall torches with Niagara fire and Blueprint flicker, candles, an iron-strapped door and frame, and rubble. Lit only by torches and candles with Lumen. Also includes a bodycam-style player camera with lens distortion, film grain and head bob. Skull and bone scans from Quixel Megascans.",
+      "A modular dungeon kit built in Blender and assembled in UE5. Walls, doorways, pillars, trims, floors, ceilings and corridor pieces all snap to a 4 m grid, so 20 x 20 m rooms and 4 m corridors connect in any layout. Stone surfaces use Nanite displacement with an edge-fade mask so neighbouring pieces seal without seams. My own props: sarcophagi, wall torches with Niagara fire and Blueprint flicker, candles, an iron-strapped door and frame, and rubble. Lit only by torches and candles with Lumen. Also includes a bodycam-style player camera with lens distortion, film grain and head bob. Surface textures (stone, wood) and the skull and bone scans are from Fab / Quixel Megascans; the material setup is mine.",
     tools: ["Blender", "UE5", "Nanite", "Lumen", "Niagara", "Blueprints"],
     cover: "images/crypt-corridor.jpg",
     clip: "video/crypt-loop.mp4",
