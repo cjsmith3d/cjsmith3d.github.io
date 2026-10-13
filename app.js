@@ -24,9 +24,10 @@
   $("skills").innerHTML = SITE.skills.map((s) => `<li>${esc(s)}</li>`).join("");
   $("email").textContent = SITE.email;
   $("email").href = `mailto:${SITE.email}`;
+  $("contact-location").textContent = SITE.location;
   $("footer").textContent = `© ${new Date().getFullYear()} ${SITE.name} · ${SITE.location}`;
 
-  const LABELS = { artstation: "ArtStation", fab: "Fab store", github: "GitHub", youtube: "YouTube", linkedin: "LinkedIn" };
+  const LABELS = { artstation: "ArtStation", fab: "Fab store", github: "GitHub", youtube: "YouTube", linkedin: "LinkedIn", cv: "CV" };
   $("links").innerHTML = Object.entries(SITE.links)
     .filter(([, url]) => url)
     .map(([k, url]) => `<a class="btn" href="${esc(url)}" target="_blank" rel="noopener">${LABELS[k] || k}</a>`)
@@ -65,7 +66,8 @@
 
   const forSale = PROJECTS.map((p, i) => [p, i]).filter(([p]) => p.fab);
   $("store-cards").innerHTML = forSale.map(([p, i]) => card(p, i, true)).join("");
-  if (!forSale.length) $("store-empty").style.display = "block";
+  // Hide the store section and its nav link until something is listed on Fab.
+  if (!forSale.length) { $("store").style.display = "none"; $("store-link").style.display = "none"; }
 
   // --- modal ---
   const modal = $("modal");

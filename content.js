@@ -5,26 +5,27 @@
 
 const SITE = {
   name: "Connor Smith",
-  role: "Unreal Engine Artist & Technical Designer",
-  tagline: "Environments, props and Blueprint tools built in Unreal Engine 5.",
+  role: "Environment & Prop Artist, Unreal Engine 5",
+  tagline: "Modular environments and game-ready props, built in Blender and Unreal. Currently building a crypt dungeon kit.",
   location: "Oxfordshire, UK",
   email: "connorjaysmith0123@gmail.com",
   available: true, // shows the green "Open to work" badge. Set to false to hide it.
 
   about: [
-    "I build environments, modular kits and gameplay tools in Unreal Engine 5.",
+    "I build modular environments and game-ready props in Blender and Unreal Engine 5.",
     "Before games I spent years in IT support, so I care about things being well organised, documented and easy for other people to use. That carries into how I name, structure and package assets.",
   ],
 
-  skills: ["Unreal Engine 5", "Blueprints", "Nanite / Lumen", "Material Editor", "PCG", "Blender", "Substance Painter", "Quixel Megascans"],
+  skills: ["Unreal Engine 5", "Blueprints", "Material Editor", "Nanite", "Lumen", "Niagara", "Blender", "UV unwrapping & baking", "Modular kits"],
 
   // Leave a link as "" to hide its button.
   links: {
-    artstation: "https://www.artstation.com/connorjsmith",
+    artstation: "",
     fab: "",
-    github: "https://cjsmith3d.github.io",
+    github: "https://github.com/cjsmith3d",
     youtube: "",
-    linkedin: "https://www.linkedin.com/in/connor-smith-754aa8196",
+    linkedin: "",
+    cv: "", // e.g. "cv.pdf" once you add your CV to the site folder
   },
 };
 
@@ -42,16 +43,31 @@ const SITE = {
 
 const PROJECTS = [
   {
+    title: "Crypt Dungeon Kit",
+    category: "Environment",
+    year: "2026",
+    summary: "A modular crypt kit: rooms and corridors that snap together on a 4 m grid.",
+    description:
+      "A modular dungeon kit built in Blender and assembled in UE5. Walls, doorways, pillars, trims, floors, ceilings and corridor pieces all snap to a 4 m grid, so 20 x 20 m rooms and 4 m corridors connect in any layout. Stone surfaces use Nanite displacement with an edge-fade mask so neighbouring pieces seal without seams. My own props: sarcophagi, wall torches with Niagara fire and Blueprint flicker, candles, an iron-strapped door and frame, and rubble. Lit only by torches and candles with Lumen. Also includes a bodycam-style player camera with lens distortion, film grain and head bob. Skull and bone scans from Quixel Megascans.",
+    tools: ["Blender", "UE5", "Nanite", "Lumen", "Niagara", "Blueprints"],
+    cover: "images/crypt-corridor.jpg",
+    gallery: ["images/crypt-corridor.jpg", "images/crypt-room.jpg", "images/crypt-door.jpg", "images/crypt-skull.jpg"],
+    video: "",
+    fab: "",
+    price: "",
+    placeholder: true,
+  },
+  {
     title: "Candlelit Cellar",
     category: "Environment",
     year: "2026",
-    summary: "First environment: a modular cellar kit dressed with my own props.",
+    summary: "A candlelit cellar where someone has just left in a hurry.",
     description:
-      "A small UE5 environment built from a modular kit made in Blender: 2m floor tiles, brick walls and timber beams, all snapping to a 200uu grid with matched texel density. Dressed with my crate, barrel and lantern props. Lit only by candles, with a Blueprint that gives each lantern a natural, uneven flicker.",
-    tools: ["Blender", "UE5", "Blueprints"],
+      "A small UE5 environment built from a modular kit made in Blender: brick walls and timber beams snapping to a 200uu grid with matched texel density. Every prop is my own: crates, stacked barrels, lanterns, a trestle table and stools. Lit only by candles, with a Blueprint that gives each lantern a natural, uneven flicker. The story is in the details: the table lantern has just been snuffed out, with a thin trail of Niagara smoke still rising from the wick, and a stool lies knocked over beside it.",
+    tools: ["Blender", "UE5", "Blueprints", "Niagara"],
     cover: "images/cellar-hero.jpg",
     clip: "video/cellar-flicker.mp4", // a video file in the video folder; plays when the project opens
-    gallery: [],
+    gallery: ["images/cellar-hero.jpg", "images/cellar-wide.jpg"],
     video: "",
     fab: "",
     price: "",
@@ -61,7 +77,7 @@ const PROJECTS = [
     title: "Candle Lantern",
     category: "Props",
     year: "2026",
-    summary: "Third prop: glass, emissive flame and a real light source.",
+    summary: "Glass, an emissive flame and a real light source.",
     description:
       "Modelled in Blender: metal cage built with the Wireframe modifier, glass panes, pyramid roof, ring handle and candle. In UE5 the glass uses a translucent material, the flame is emissive, and a warm point light at the wick casts the cage shadows across the scene.",
     tools: ["Blender", "UE5"],
@@ -76,7 +92,7 @@ const PROJECTS = [
     title: "Oak Barrel",
     category: "Props",
     year: "2026",
-    summary: "Second prop: curved staves, iron hoops, two materials.",
+    summary: "Curved staves, iron hoops, two materials.",
     description:
       "Modelled in Blender from a 20-sided cylinder: stave grooves bevelled in, the bulge shaped with proportional editing, recessed lids top and bottom. Hoops are separate smooth bands with a metal material. Cylinder-projected UVs so the grain runs along each stave. Set up in UE5 with wood and metallic materials and rounded collision.",
     tools: ["Blender", "UE5"],
@@ -91,7 +107,7 @@ const PROJECTS = [
     title: "Wooden Shipping Crate",
     category: "Props",
     year: "2026",
-    summary: "My first game-ready prop, built in Blender and set up in UE5.",
+    summary: "Game-ready crate, built in Blender and set up in UE5.",
     description:
       "Frame built with a Wireframe modifier, planks with Array and Bevel. Each plank's UVs are offset so no two boards share the same grain. Ambient occlusion baked to a second UV channel. Imported into UE5 at real-world scale (1m) with two material slots and collision.",
     tools: ["Blender", "UE5"],
