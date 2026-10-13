@@ -20,7 +20,7 @@ const SITE = {
 
   // Leave a link as "" to hide its button.
   links: {
-    artstation: "https://www.artstation.com/connorjsmith",
+    artstation: "https://connorjsmith3d.artstation.com/",
     fab: "",
     github: "https://github.com/cjsmith3d",
     youtube: "",
